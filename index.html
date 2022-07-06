@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- meta태그는 문서에 대한 정보! 특히 이중 viewport는 반응형 웹을 위해 필요 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- og(OpenGraph)태그는 사이트로 공유될 때 사용되어지는 정보 -->
+    <meta property="og:title" content="페이지 제목">
+    <meta property="og:description" content="페이지 설명">
+    <meta property="og:image" content="공유할 이미지">
+    <title>은정 - 나만의 웹사이트</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    
+    .pfp{
+        width: 100px;
+        height: 100px;
+
+        border-radius: 100%;
+
+        border: 2px solid white;
+
+        background-image: url('더지13.png');
+        background-position: center;
+        background-size: cover;
+    }
+    .main{
+        color: white;
+        font-size: 20px;
+    }
+    .sub{
+        color: white;
+        font-size: 14px;
+    }
+    .profile{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile > a{
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin: auto 30px auto 30px;
+        
+        background-color: rgb(110, 161, 87);
+        border-radius: 8px;
+        width: 300px;
+        height: 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+    .profile > a:hover{
+        border: 1px solid white;
+        background-color: rgb(142, 204, 113);
+    }
+    .title{
+        color: white;
+        width: 800px;
+        
+    }
+    .wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .img{
+        width: 400px;
+        height: 250px;
+
+        background-image: url('image.jpg');
+        background-position: center;
+        background-size: cover;
+
+        border-radius: 24px;
+    }
+    .box > p, .story > p{
+        margin-left: 20px;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <div class="profile">
+            <div class="pfp"></div>
+            <h1 class="main">은정</h1>
+            <p class="sub">프로그래밍 재밌다😀</p>
+            <a target="_blank" href="https://github.com/">GitHub</a>
+            <a target="_blank" href="https://www.instagram.com/">Instagram</a>
+            <a target="_blank" href="https://ko-kr.facebook.com/">facebook</a>
+        </div>
+        <div class="contents">
+            <div class="title">
+                <h1>나를 소개합니다</h1>
+            </div>
+            <div class="box">
+                <div class="img"></div>
+                <div class="story">
+                    <p>
+                        도림고등학교에서 정보를 가르치고 있음.<br>
+                        프로그래밍을 좋아함 아마도...😎<br>
+                        무슨 말을 써야하지..?<br>
+                        다양한 취미를 가지고 있다!!!!!!<br>
+                        옆에 있는 캐릭터 이름은 더지.. 특징 두더지이다.
+                    </p>
+                </div>
+            </div>
+            <h3>내가 다니는 학교는?</h3>
+            <p>도림고등학교</p>
+            <div class="box" id="box2">
+                <div id="map" style="width: 400px;; height:250px;">
+                </div>
+                <div class="3words"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=321e4b7296a19c569e3dd06a521db174"></script>
+<script>
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.4208932, 126.7529398), 
+            level: 3 
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+    var markerPosition  = new kakao.maps.LatLng(37.4208932, 126.7529398); 
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+</script>
+</html> 
