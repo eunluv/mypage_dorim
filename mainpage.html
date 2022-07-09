@@ -42,11 +42,9 @@
                             <img class="picture" src="1.jpg" alt="1" width="300px" height="300px">
                         </div>
                         <div class="description" style="display: none;" >
-                            <span>
-                                도림고등학교에서 정보쌤으로 근무하고 있음<br>
-                                진도를 많이 못나간거 같아 슬픔😢<br>
-                                2학기에는 더 열심히해야지!!
-                            </span>
+                            <span>도림고등학교에서 정보쌤으로 근무하고 있음</span>
+                            <span>진도를 많이 못나간거 같아 슬픔😢</span>
+                            <span>2학기에는 더 열심히해야지!!</span>    
                         </div>
                     </div>
                     <div class="post">
@@ -55,9 +53,7 @@
                             </a>
                         </div>
                         <div class="description" style="display: none;">
-                            <span>
-                                두 번째 사진fcgxcbvxcbxcbxcbbcccccccccccccccccccccccccccccccccccccccccccc
-                            </span>
+                            <span>두 번째 사진fcgxcbvxcbxcbxcbbcccccccccccccccccccccccccccccccccccccccccccc</span>
                         </div>
                     </div>
                     <div class="post">
@@ -66,10 +62,8 @@
                             </a>
                         </div>
                         <div class="description" style="display: none;">
-                            <span>
-                                세 번째 사진ddddddddddddddddddddddddddddddddddddddddddddddsgagadgaddasgdga<br>
-                                장은정살려,..
-                            </span>
+                            <span>세 번째 사진ddddddddddddddddddddddddddddddddddddddddddddddsgagadgaddasgdga</span>
+                            <span>장은정살려,..</span>
                         </div>
                     </div>
                 </div>
@@ -79,7 +73,7 @@
     <div id ="lightbox">
         <div id="postbox">
             <img id="postpic" src="1.jpg" width="500px" height="500px">
-            <span id="postdes"></span>
+            <div id="postdes"></div>
         </div>
     </div>
 </body>
@@ -101,6 +95,7 @@
         var bigDescription = descriptions[num].innerHTML;
         postpic.setAttribute("src", bigPicture);
         postdes.innerHTML = bigDescription;
+        console.log(postdes.innerHTML);
         lightbox.style.display="block";
     }
 

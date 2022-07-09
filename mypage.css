@@ -161,7 +161,7 @@ content{
 }
 #postbox{
     max-width: 900px;
-    width: 80%;
+    width: 90%;
     /* height: auto; */
 
     position: absolute;
@@ -179,6 +179,8 @@ content{
 }
 #postdes{
     width: 100%;
-    word-wrap: break-word;
-    padding: 20px 20px 20px 20px;
+    word-break: break-all;
+    white-space: pre-line;
+    display: block;
+    padding: 0px 20px 20px 20px;
 }
