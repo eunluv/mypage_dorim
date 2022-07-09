@@ -7,153 +7,14 @@
     <meta property="og:title" content="은정 - 블로그">
     <meta property="og:description" content="살려줘">
     <meta property="og:image" content="더지13.png">
-    
+    <link rel="stylesheet" href="mypage.css">
     <title>은정 - 블로그</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-    * {
-        font-family: 'Nanum Gothic', sans-serif;
-    }
-    body{
-        background-color: rgb(219, 181, 255);
-    }
-    main{
-        flex-grow: 1;
-        margin: 30px auto 30px auto;
-        width: 950px;
-        height: 750px;
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        align-items: stretch;
-        position: relative;
-    }
-    header{
-        height: 150px;
-        width: 100%;
-        margin-bottom: 40px; 
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .p_s{
-        width: 250px;
-        height: 150px;
-        margin-right: 30px;
-        flex-shrink: 0;
-    }
-    .pfp{
-        width: 150px;
-        height: 150px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .mypic{
-        border-radius: 50%;
-        background-color: white;
-        border: 1px solid rgb(255, 255, 255);
-        width: 100%;
-        height: 100%;
-        margin: 0;
-
-        background-image: url('더지13.png');
-        background-position: center;
-        background-size: cover;
-    }
-    .info_s{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .name_s > h1{
-        border-bottom: 1px solid rgb(255, 255, 255);
-    }
-    .self-intro{
-        margin-bottom: 20px;
-    }
-    .linklist{
-        display: flex;
-        flex-direction: row;
-    }
-    .linklist>a{
-        font-size: 14px;
-        font-weight: bold;
-        color: white;
-        margin-right:20px;
-
-        background-color: rgb(161, 92, 175);
-        border-radius: 8px;
-        width: 80px;
-        height: 30px;
-
-        text-decoration: none;
-
-        text-align: center;
-        line-height: 30px;
-    }
-    .linklist>a:hover{
-        /* border: 1px solid white; */
-        background-color: rgb(225, 171, 236);
-    }
-    content{
-        border-top: 1px solid rgb(255, 255, 255);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .contents_s{
-        width: 930px;
-    }
-    .contents{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-    .picture{
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-    }
-    .picture:hover{
-        filter: brightness(70%);
-    }
-    #lightbox{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.6);
-        top: 0;
-        left: 0;
-        display: none;
-    }
-    #postbox{
-        width: 900px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        border: 1px solid rgb(255, 255, 255);
-
-        display: flex;
-        align-items: stretch;
-    }
-    #postdes{
-        background-color: white;
-        flex-grow: 1;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-
 </style>
 <body>
     <main>
-        <header>
+        <header id="header">
             <div class="p_s">
                 <div class="pfp">
                     <div class="mypic"></div>
@@ -178,7 +39,6 @@
                 <div class="contents">
                     <div class="post">
                         <div>
-                            <!-- <a href="content1.html"> -->
                             <img class="picture" src="1.jpg" alt="1" width="300px" height="300px">
                         </div>
                         <div class="description" style="display: none;" >
@@ -196,7 +56,7 @@
                         </div>
                         <div class="description" style="display: none;">
                             <span>
-                                두 번째 사진
+                                두 번째 사진fcgxcbvxcbxcbxcbbcccccccccccccccccccccccccccccccccccccccccccc
                             </span>
                         </div>
                     </div>
@@ -211,15 +71,6 @@
                             </span>
                         </div>
                     </div>
-                    <!-- <div class="picture">
-                        <img src="2.jpg" alt="두 번째 게시물" width="300px" height="300px">
-                    </div>
-                    <div class="picture">
-                        <img src="3.jpg" alt="세 번째 게시물" width="300px" height="300px">
-                    </div>
-                    <div class="picture">
-                        <img src="3.jpg" alt="네 번째 게시물" width="300px" height="300px">
-                    </div>        -->
                 </div>
             </article>
         </content>
@@ -240,22 +91,12 @@
     var postdes = document.getElementById("postdes");
 
     for(i = 0; i < pics.length; i++){
-        // pics[i].addEventListener("click", function(){showlightbox(i)});
         pics[i].addEventListener("click", showlightbox);
     }
 
-    // function showlightbox(i){
-    //     console.log(i);
-    //     // var bigPicture = this.getAttribute("src");
-    //     var bigDescription = descriptions[i].innerHTML;
-    //     // postpic.setAttribute("src", bigPicture);
-    //     postdes.innerHTML = bigDescription;
-    //     lightbox.style.display="block";
-    // }
     function showlightbox(){
         var bigPicture = this.getAttribute("src");
         var num = Number(this.getAttribute("alt"))-1;
-        console.log(num)
         var bigDescription = descriptions[num].innerHTML;
         postpic.setAttribute("src", bigPicture);
         postdes.innerHTML = bigDescription;
