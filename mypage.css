@@ -34,11 +34,13 @@ main{
         width: 100%;
     }
     #postbox{
+        width: 100%;
         flex-direction: column;
         justify-content: center;
     }
     #postpic{
-        width: auto;
+        width: 100%;
+        height: auto;
     }
 
 }
