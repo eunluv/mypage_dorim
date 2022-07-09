@@ -30,19 +30,30 @@ main{
         justify-content: center;
         align-items: center;
     }
-    #lightbox{
-        width: 100%;
-    }
     #postbox{
-        width: 100%;
+        width: 80%;
+        height: auto;
+        position: absolute;
         flex-direction: column;
         justify-content: center;
     }
     #postpic{
         width: 100%;
         height: auto;
+        position: absolute;
     }
-
+}
+@media screen and (max-height: 550px ){
+    #postbox{
+        height: 80%;
+        width: auto;
+        position: absolute;
+        flex-direction: row;
+    }
+    #postpic{
+        height: 100%;
+        width: auto;
+    }
 }
 header{
     height: fit-content;
@@ -150,9 +161,9 @@ content{
 }
 #postbox{
     max-width: 900px;
-    min-width: fit-content;
     width: 80%;
-    
+    /* height: auto; */
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -167,8 +178,7 @@ content{
     position: relative;
 }
 #postdes{
-    box-sizing: border-box;
-    max-width: 400px;
+    width: 100%;
     word-wrap: break-word;
-    padding: 20px 20px 20px 20px
+    padding: 20px 20px 20px 20px;
 }
